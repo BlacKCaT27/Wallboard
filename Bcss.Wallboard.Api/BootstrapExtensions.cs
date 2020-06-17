@@ -11,7 +11,7 @@ namespace Bcss.Wallboard.Api
         public static IServiceCollection ConfigureDatabase(this IServiceCollection services, IConfiguration configuration)
         {
             var dbSettings = new PostgresDbSettings();
-            configuration.Bind(dbSettings);
+            configuration.GetSection("PostgresDbSettings").Bind(dbSettings);
 
             services.AddDbContext<SlideContext>(options =>
             {

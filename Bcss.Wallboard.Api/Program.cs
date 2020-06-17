@@ -1,6 +1,7 @@
 using System;
 using Bcss.Wallboard.Api.Data.EfCore.Contexts;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -40,6 +41,15 @@ namespace Bcss.Wallboard.Api
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                })
+                .ConfigureAppConfiguration((builderContext, config) =>
+                {
+                    var env = builderContext.HostingEnvironment;
+                    var environmentName = env.EnvironmentName;
+
+                    config.AddJsonFile("appsettings.json", false, false)
+                        .AddJsonFile($"appsettings.{environmentName}.json", true, false)
+                        .AddEnvironmentVariables();
                 });
     }
 }

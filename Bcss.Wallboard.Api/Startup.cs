@@ -42,6 +42,8 @@ namespace Bcss.Wallboard.Api
                 })
                 .AddApplicationPart(_controllerAssembly);
 
+            services.ConfigureDatabase(Configuration);
+
             services.AddMediatR(new List<Assembly>
             {
                 Assembly.GetCallingAssembly(),
