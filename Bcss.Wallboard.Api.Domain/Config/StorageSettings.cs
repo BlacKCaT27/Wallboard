@@ -1,7 +1,9 @@
 ﻿namespace Bcss.Wallboard.Api.Domain.Config
 {
-    public class PostgresDbSettings
+    public class StorageSettings
     {
+        public string StorageMechanism { get; set; }
+
         public string ConnectionString { get; set; }
     }
 }

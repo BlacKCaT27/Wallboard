@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Bcss.Wallboard.Api.Data.EfCore\Bcss.Wallboard.Api.Data.EfCore.csproj" />
+    <ProjectReference Include="..\Bcss.Wallboard.Api.Data.InMemory\Bcss.Wallboard.Api.Data.InMemory.csproj" />
     <ProjectReference Include="..\Bcss.Wallboard.Api.Domain\Bcss.Wallboard.Api.Domain.csproj" />
     <ProjectReference Include="..\Bcss.Wallboard.Api.Web\Bcss.Wallboard.Api.Web.csproj" />
   </ItemGroup>

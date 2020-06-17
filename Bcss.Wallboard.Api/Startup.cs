@@ -1,7 +1,5 @@
 using System.Collections.Generic;
 using System.Reflection;
-using Bcss.Wallboard.Api.Data;
-using Bcss.Wallboard.Api.Data.EfCore;
 using Bcss.Wallboard.Api.Web.Validation;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
@@ -42,7 +40,7 @@ namespace Bcss.Wallboard.Api
                 })
                 .AddApplicationPart(_controllerAssembly);
 
-            services.ConfigureDatabase(Configuration);
+            services.ConfigureStorage(Configuration);
 
             services.AddMediatR(new List<Assembly>
             {
@@ -50,10 +48,6 @@ namespace Bcss.Wallboard.Api
                 Assembly.Load("Bcss.Wallboard.Api.Domain")
 
             }.ToArray());
-
-            services.AddScoped<ISlideWriter, EfCoreSlideWriter>();
-            services.AddScoped<ISlideReader, EfCoreSlideReader>();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
