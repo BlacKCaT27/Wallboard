@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>2eb38add-6e3a-4f03-8c23-27f8a986df9c</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bcss.Wallboard.Api.Data.EfCore\Bcss.Wallboard.Api.Data.EfCore.csproj" />
+    <ProjectReference Include="..\Bcss.Wallboard.Api.Domain\Bcss.Wallboard.Api.Domain.csproj" />
+    <ProjectReference Include="..\Bcss.Wallboard.Api.Web\Bcss.Wallboard.Api.Web.csproj" />
+  </ItemGroup>
+
+</Project>

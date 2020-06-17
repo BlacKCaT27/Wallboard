@@ -1,0 +1,48 @@
+*.swp
+*.*~
+appsettings.Development.json
+project.lock.json
+.DS_Store
+*.pyc
+StyleCop.Cache
+
+# IDE
+.vscode
+.vs
+.idea
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+out/
+bld/
+[Bb]in/
+[Oo]bj/
+msbuild.log
+msbuild.err
+msbuild.wrn
+
+# Build steps
+pipeline/output
+
+# Generated Code
+generated/
+
+# Coverage
+coverage.cobertura.xml
+coverage-report
+TestResults/
+
+# misc
+*.tasks
