@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using Bcss.Wallboard.Api.Domain.Responses;
+﻿using Bcss.Wallboard.Api.Domain.Responses;
 using MediatR;
 
 namespace Bcss.Wallboard.Api.Domain.Commands

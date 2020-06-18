@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Net;
+using System.Threading.Tasks;
 using Bcss.Wallboard.Api.Domain.Commands;
 using Bcss.Wallboard.Api.Domain.Queries;
 using MediatR;
@@ -37,7 +38,12 @@ namespace Bcss.Wallboard.Api.Web.Controllers
         {
             var command = new DeleteSlideCommand(slideId);
             var result = await _mediator.Send(command);
-            return result != null ? (IActionResult)Ok() : NotFound();
+
+            // Here, we want DeleteSlide to be idempotent and continue to report success when deleting items
+            // that no longer exist, since from the callers perspective, the new state they requested (for the
+            // item to not exist any longer) is still satisfied. Therefore we only do not return Ok if we detect
+            // an error in processing, which is represented by result being null.
+            return result != null ? Ok() : new StatusCodeResult((int)HttpStatusCode.InternalServerError);
         }
     }
 }
