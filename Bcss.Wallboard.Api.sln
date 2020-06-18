@@ -15,6 +15,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bcss.Wallboard.Api.Data.EfC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bcss.Wallboard.Api.Data.InMemory", "Bcss.Wallboard.Api.Data.InMemory\Bcss.Wallboard.Api.Data.InMemory.csproj", "{29A9A5B4-C47F-420B-BBAE-64FB396D052F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bcss.Wallboard.Api.Domain.Test", "Bcss.Wallboard.Api.Domain.Test\Bcss.Wallboard.Api.Domain.Test.csproj", "{AD483A34-B1F9-4E31-8DA1-42B29E76CE2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bcss.Wallboard.Api.Web.Tests", "Bcss.Wallboard.Api.Web.Tests\Bcss.Wallboard.Api.Web.Tests.csproj", "{343E60E2-F28A-417D-9F83-2B4047C0CFE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{29A9A5B4-C47F-420B-BBAE-64FB396D052F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29A9A5B4-C47F-420B-BBAE-64FB396D052F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29A9A5B4-C47F-420B-BBAE-64FB396D052F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD483A34-B1F9-4E31-8DA1-42B29E76CE2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD483A34-B1F9-4E31-8DA1-42B29E76CE2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD483A34-B1F9-4E31-8DA1-42B29E76CE2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD483A34-B1F9-4E31-8DA1-42B29E76CE2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{343E60E2-F28A-417D-9F83-2B4047C0CFE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{343E60E2-F28A-417D-9F83-2B4047C0CFE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{343E60E2-F28A-417D-9F83-2B4047C0CFE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{343E60E2-F28A-417D-9F83-2B4047C0CFE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

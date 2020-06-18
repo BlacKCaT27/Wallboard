@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Reflection;
-using Bcss.Wallboard.Api.Web.Validation;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -34,10 +33,7 @@ namespace Bcss.Wallboard.Api
                     .AllowAnyHeader();
             }));
 
-            services.AddControllers(options =>
-                {
-                    options.Filters.Add<ValidationFilter>();
-                })
+            services.AddControllers()
                 .AddApplicationPart(_controllerAssembly);
 
             services.ConfigureStorage(Configuration);

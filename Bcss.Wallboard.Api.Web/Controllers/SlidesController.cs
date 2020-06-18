@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Bcss.Wallboard.Api.Web.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/v1/[controller]")]
     public class SlidesController : ControllerBase
     {
         private readonly IMediator _mediator;

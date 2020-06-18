@@ -28,7 +28,9 @@ namespace Bcss.Wallboard.Api.Domain.Handlers
 
             return new SlideResponse
             {
-                Id = slide.Id
+                Id = slide.Id,
+                Name = slide.Name,
+                Content = slide.Content
             };
         }
     }

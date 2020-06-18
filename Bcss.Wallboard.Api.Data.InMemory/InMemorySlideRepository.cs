@@ -11,6 +11,22 @@ namespace Bcss.Wallboard.Api.Data.InMemory
     {
         private readonly ConcurrentDictionary<int, Slide> _storage = new ConcurrentDictionary<int, Slide>();
 
+        public InMemorySlideRepository()
+        {
+            SeedData();
+        }
+
+        private void SeedData()
+        {
+            _storage.GetOrAdd(1, new Slide
+            {
+                Id = 1,
+                Name = "Sample",
+                Content =
+                    "<h1>My Sample Slide</h1><p>This is a sample slide containing some simple html as an example of what type of content a slide could have.</p>"
+            });
+        }
+
         public Task<Slide> GetSlideAsync(int slideId)
         {
             return Task.FromResult(_storage.ContainsKey(slideId) ? _storage[slideId] : default);

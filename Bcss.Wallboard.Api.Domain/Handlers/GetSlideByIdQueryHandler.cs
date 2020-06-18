@@ -25,12 +25,12 @@ namespace Bcss.Wallboard.Api.Domain.Handlers
 
             var slide = await _slideReader.GetSlideAsync(request.Id);
 
-            return new SlideResponse
+            return slide != null ? new SlideResponse
             {
                 Id = slide.Id,
                 Name = slide.Name,
                 Content = slide.Content
-            };
+            } : null;
         }
     }
 }
